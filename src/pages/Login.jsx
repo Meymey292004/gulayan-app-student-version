@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, use } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
@@ -23,7 +23,9 @@ function Login({ onNavigate }) {
         // TODO implement login logic here....
         // TODO validate user credentials and get token from server
     }
-
+useEffect(() => {
+    axios.get("http://act3-mejias.test/api/test")
+}, [])
     return (
         <div className="min-h-screen bg-green-50 flex items-center justify-center px-4 py-12">
             <div className="w-full max-w-md">
